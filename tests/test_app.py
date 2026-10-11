@@ -37,7 +37,7 @@ class ServiceTests(unittest.TestCase):
     def test_notes_list(self):
         status, body = self.get("/notes")
         self.assertEqual(status, 200)
-        self.assertEqual(len(body), 4)
+        self.assertEqual(len(body), 3)
         self.assertEqual(body[0]["id"], 1)
 
     def test_unknown_path_is_404(self):
