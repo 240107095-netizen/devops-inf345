@@ -1,0 +1,14 @@
+.git
+.github
+.env
+.env.*
+.cache
+.venv
+.direnv
+__pycache__
+*.pyc
+tests
+flake.nix
+flake.lock
+result
+README.md
