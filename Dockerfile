@@ -9,7 +9,7 @@ WORKDIR /app
 
 COPY app.py ./
 
-USER app
+USER 10001:10001
 
 EXPOSE 8080
 

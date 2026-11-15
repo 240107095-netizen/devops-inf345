@@ -10,6 +10,9 @@ NOTES = [
 ]
 
 
+GREETING = os.environ.get("GREETING", "Hello from the notes service")
+
+
 class Handler(BaseHTTPRequestHandler):
     def _send(self, status, payload):
         body = json.dumps(payload).encode("utf-8")
@@ -22,7 +25,7 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         path = self.path.split("?", 1)[0]
         if path == "/":
-            self._send(200, {"message": "Hello from the notes service"})
+            self._send(200, {"message": GREETING})
         elif path == "/healthz":
             self._send(200, {"status": "ok"})
         elif path == "/notes":
