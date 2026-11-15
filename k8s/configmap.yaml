@@ -1,0 +1,8 @@
+# M4: settings outside the image. Values are always text: keep the quotes.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: notes-config
+data:
+  PORT: "8080"
+  GREETING: "Hello from the notes service on Kubernetes"
